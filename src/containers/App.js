@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React from "react";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
@@ -29,7 +28,7 @@ class App extends React.Component {
     const filteredRobots = robots.filter((robot) => {
       return robot.name
         .toLowerCase(0)
-        .includes(this.state.searchField.toLowerCase());
+        .includes(searchField.toLowerCase());
     });
     return !robots.length ? (
       <h1 className="tc">Loading</h1>
